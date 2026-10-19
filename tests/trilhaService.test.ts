@@ -1,6 +1,11 @@
-import { carregarTrilhas, buscarTrilha, buscarModulo, listarTrilhas } from '../src/services/trilhaService';
+import { carregarTrilhas, buscarTrilha, buscarModulo, listarTrilhas, invalidarCache, isNivel } from '../src/services/trilhaService';
+import { Nivel } from '../src/types';
 
 describe('trilhaService', () => {
+  beforeEach(() => {
+    invalidarCache();
+  });
+
   describe('carregarTrilhas()', () => {
     it('deve retornar um array com 15 trilhas', () => {
       const trilhas = carregarTrilhas();
@@ -46,17 +51,24 @@ describe('trilhaService', () => {
       expect(modulo?.nivel).toBe('iniciante');
     });
 
-    it('deve retornar undefined para nível inexistente', () => {
+    it('deve retornar undefined para nível não cadastrado na trilha', () => {
+      // Cria uma trilha sem módulo avancado para testar o undefined
       const trilha = buscarTrilha('TypeScript')!;
-      const modulo = buscarModulo(trilha, 'nivel-inexistente');
+      const modulosSemAvancado = trilha.modulos.filter((m) => m.nivel !== 'avancado');
+      const trilhaReduzida = { ...trilha, modulos: modulosSemAvancado };
+      const modulo = buscarModulo(trilhaReduzida, 'avancado');
       expect(modulo).toBeUndefined();
     });
 
-    it('deve encontrar módulo com nível em maiúsculas (case-insensitive)', () => {
-      const trilha = buscarTrilha('TypeScript')!;
-      const modulo = buscarModulo(trilha, 'AVANCADO');
-      expect(modulo).toBeDefined();
-      expect(modulo?.nivel).toBe('avancado');
+    it('isNivel deve retornar false para string inválida', () => {
+      expect(isNivel('nivel-inexistente')).toBe(false);
+      expect(isNivel('AVANCADO')).toBe(false);
+      expect(isNivel('expert')).toBe(false);
+    });
+
+    it('isNivel deve retornar true para níveis válidos', () => {
+      const niveis: Nivel[] = ['iniciante', 'intermediario', 'avancado'];
+      niveis.forEach((n) => expect(isNivel(n)).toBe(true));
     });
   });
 

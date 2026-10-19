@@ -1,4 +1,4 @@
-import { buscarTrilha, buscarModulo, listarTrilhas } from '../services/trilhaService';
+import { buscarTrilha, buscarModulo, listarTrilhas, isNivel } from '../services/trilhaService';
 
 /**
  * Exibe o plano de estudos completo de uma trilha para o nível informado.
@@ -6,6 +6,18 @@ import { buscarTrilha, buscarModulo, listarTrilhas } from '../services/trilhaSer
  * @param nivel - Nível desejado (iniciante | intermediario | avancado)
  */
 export function trilhaCommand(tecnologia: string, nivel: string): void {
+  if (!tecnologia) {
+    console.error('\n❌ Informe o nome da tecnologia.');
+    console.log('   Uso: trilha <tecnologia> <nivel>');
+    return;
+  }
+
+  if (!isNivel(nivel)) {
+    console.error(`\n❌ Nível "${nivel}" inválido.`);
+    console.log('   Níveis aceitos: iniciante | intermediario | avancado');
+    return;
+  }
+
   const trilha = buscarTrilha(tecnologia);
 
   if (!trilha) {

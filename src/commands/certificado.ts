@@ -1,4 +1,4 @@
-import { buscarTrilha, buscarModulo, listarTrilhas } from '../services/trilhaService';
+import { buscarTrilha, buscarModulo, listarTrilhas, isNivel } from '../services/trilhaService';
 import { montarCertificado } from '../services/certificadoService';
 
 /**
@@ -10,6 +10,13 @@ import { montarCertificado } from '../services/certificadoService';
 export function certificadoCommand(nome: string, tecnologia: string, nivel: string): void {
   if (!nome || nome.trim() === '') {
     console.error('\n❌ Informe seu nome para gerar o certificado.');
+    console.log('   Uso: certificado <nome> <tecnologia> <nivel>');
+    return;
+  }
+
+  if (!isNivel(nivel)) {
+    console.error(`\n❌ Nível "${nivel}" inválido.`);
+    console.log('   Níveis aceitos: iniciante | intermediario | avancado');
     return;
   }
 
