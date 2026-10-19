@@ -1,0 +1,887 @@
+[
+  {
+    "id": "1",
+    "tecnologia": "IBM Bob",
+    "descricao": "Aprenda a usar o IBM Bob como assistente de desenvolvimento: modos, skills, ferramentas e automações para turbinar sua produtividade.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Primeiros Passos com o IBM Bob",
+        "topicos": [
+          "O que é o IBM Bob e como ele funciona",
+          "Instalação e configuração inicial",
+          "Modos disponíveis: Agent, Plan, Ask",
+          "Como fazer perguntas eficientes ao Bob"
+        ],
+        "desafios": [
+          {
+            "titulo": "Seu Primeiro Prompt",
+            "descricao": "Use o IBM Bob para gerar um arquivo README.md para um projeto simples de calculadora em TypeScript.",
+            "dica": "Descreva bem o projeto antes de pedir a documentação."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Skills e Ferramentas do Bob",
+        "topicos": [
+          "O que são skills e como ativá-las",
+          "Usando ferramentas como read_file, write_file e grep",
+          "Trabalhando com o modo Plan para arquitetura",
+          "Integrando Bob com GitHub via MCP"
+        ],
+        "desafios": [
+          {
+            "titulo": "Refatoração Assistida",
+            "descricao": "Peça ao IBM Bob para refatorar uma função JavaScript complexa, adicionando tipagem TypeScript e testes.",
+            "dica": "Use o modo Agent e forneça o arquivo completo para análise."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Automações e MCP com IBM Bob",
+        "topicos": [
+          "Criando servidores MCP customizados",
+          "Registrando ferramentas e recursos no Bob",
+          "Hooks de ciclo de vida do Bob",
+          "Criando modos personalizados (custom_modes.yaml)"
+        ],
+        "desafios": [
+          {
+            "titulo": "Servidor MCP Próprio",
+            "descricao": "Construa um servidor MCP que exponha pelo menos 2 ferramentas e registre-o no IBM Bob.",
+            "dica": "Use a skill build-mcp-server e siga o padrão registerTool da API v2."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "tecnologia": "Inteligência Artificial Generativa",
+    "descricao": "Explore o universo dos modelos de linguagem, engenharia de prompts, RAG e aplicações práticas de IA generativa.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Fundamentos de IA Generativa",
+        "topicos": [
+          "O que são LLMs (Large Language Models)",
+          "Como funciona o processo de geração de texto",
+          "Diferença entre IA generativa e IA tradicional",
+          "Principais modelos: GPT, Claude, Gemini, Llama"
+        ],
+        "desafios": [
+          {
+            "titulo": "Comparando Modelos",
+            "descricao": "Faça a mesma pergunta técnica para dois modelos de IA diferentes e compare as respostas em um arquivo markdown.",
+            "dica": "Avalie precisão, clareza e detalhamento das respostas."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Engenharia de Prompts",
+        "topicos": [
+          "Técnicas: zero-shot, few-shot e chain-of-thought",
+          "Estruturando prompts para resultados consistentes",
+          "Controle de temperatura e parâmetros de geração",
+          "Prompts para geração de código"
+        ],
+        "desafios": [
+          {
+            "titulo": "Prompt para Geração de Testes",
+            "descricao": "Crie um prompt que, dado qualquer função TypeScript, gere automaticamente casos de teste com Jest.",
+            "dica": "Use few-shot com exemplos de entrada e saída esperada."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "RAG e Aplicações Avançadas",
+        "topicos": [
+          "O que é RAG (Retrieval-Augmented Generation)",
+          "Embeddings e bancos de dados vetoriais",
+          "Implementando um pipeline RAG básico",
+          "Agentes de IA e uso de ferramentas"
+        ],
+        "desafios": [
+          {
+            "titulo": "Mini RAG",
+            "descricao": "Implemente um sistema simples onde a IA responde perguntas com base em um conjunto de documentos locais.",
+            "dica": "Use embeddings para encontrar os trechos mais relevantes antes de enviar ao modelo."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "tecnologia": "TypeScript",
+    "descricao": "Domine o TypeScript do zero ao avançado: tipos, interfaces, generics, decorators e integração com Node.js.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Introdução ao TypeScript",
+        "topicos": [
+          "Por que TypeScript? Vantagens sobre JavaScript",
+          "Tipos primitivos: string, number, boolean, null, undefined",
+          "Arrays, tuplas e enums",
+          "Funções tipadas e parâmetros opcionais"
+        ],
+        "desafios": [
+          {
+            "titulo": "Calculadora Tipada",
+            "descricao": "Crie uma calculadora em TypeScript com funções tipadas para soma, subtração, multiplicação e divisão.",
+            "dica": "Use tipos de retorno explícitos e trate a divisão por zero."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Interfaces, Types e Generics",
+        "topicos": [
+          "Interface vs Type Alias",
+          "Generics: criando código reutilizável",
+          "Union types e intersection types",
+          "Utility types: Partial, Required, Pick, Omit"
+        ],
+        "desafios": [
+          {
+            "titulo": "Repositório Genérico",
+            "descricao": "Crie uma classe genérica Repository<T> com métodos findById, findAll, save e delete.",
+            "dica": "Use generics com constraints para garantir que T tenha ao menos um campo id."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Decorators, Tipos Avançados e Build",
+        "topicos": [
+          "Decorators de classe e método",
+          "Mapped types e conditional types",
+          "Template literal types",
+          "Configuração avançada do tsconfig.json"
+        ],
+        "desafios": [
+          {
+            "titulo": "Decorator de Log",
+            "descricao": "Implemente um decorator @Log que registra automaticamente os parâmetros e o retorno de qualquer método.",
+            "dica": "Use Reflect.metadata para acessar informações de tipo em tempo de execução."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "tecnologia": "MCP (Model Context Protocol)",
+    "descricao": "Aprenda a criar e consumir servidores MCP para conectar ferramentas externas a modelos de linguagem como o IBM Bob.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "O que é MCP",
+        "topicos": [
+          "Conceito de Model Context Protocol",
+          "Como o MCP conecta ferramentas a LLMs",
+          "Diferença entre recursos, ferramentas e prompts MCP",
+          "Exemplos de servidores MCP existentes"
+        ],
+        "desafios": [
+          {
+            "titulo": "Explorando MCP",
+            "descricao": "Configure um servidor MCP público (como o GitHub MCP) no IBM Bob e use uma ferramenta disponível.",
+            "dica": "Consulte a skill configure-mcp para o passo a passo."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Criando seu Primeiro Servidor MCP",
+        "topicos": [
+          "Estrutura de um servidor MCP em Node.js",
+          "API v2: registerTool, registerResource, registerPrompt",
+          "Tipos de transporte: stdio e HTTP",
+          "Testando o servidor localmente"
+        ],
+        "desafios": [
+          {
+            "titulo": "Ferramenta de Cotação",
+            "descricao": "Crie um servidor MCP com uma ferramenta que retorna a cotação fictícia de criptomoedas.",
+            "dica": "Use dados mockados em JSON e registre a ferramenta com parâmetros bem definidos."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "MCP Avançado: Auth e Recursos Dinâmicos",
+        "topicos": [
+          "Autenticação com API Key e OAuth no MCP",
+          "Recursos dinâmicos com URI templates",
+          "Publicando e registrando o servidor no Bob",
+          "Boas práticas de segurança em servidores MCP"
+        ],
+        "desafios": [
+          {
+            "titulo": "Servidor MCP com Auth",
+            "descricao": "Adicione autenticação por API Key ao seu servidor MCP e configure-o com variáveis de ambiente.",
+            "dica": "Nunca exponha tokens no código-fonte; use .env e adicione ao .gitignore."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "tecnologia": "Node.js",
+    "descricao": "Construa aplicações back-end robustas com Node.js: módulos, streams, APIs REST e integração com bancos de dados.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Fundamentos do Node.js",
+        "topicos": [
+          "Event loop e modelo assíncrono",
+          "Módulos CommonJS e ESModules",
+          "Sistema de arquivos com fs e path",
+          "NPM: gerenciando dependências"
+        ],
+        "desafios": [
+          {
+            "titulo": "Leitor de Arquivos",
+            "descricao": "Crie um script Node.js que lê todos os arquivos .json de uma pasta e exibe seu conteúdo formatado no terminal.",
+            "dica": "Use fs.readdirSync e JSON.parse para processar os arquivos."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "APIs REST com Express",
+        "topicos": [
+          "Criando um servidor HTTP com Express",
+          "Rotas, middlewares e tratamento de erros",
+          "Validação de dados com Zod ou Joi",
+          "Autenticação com JWT"
+        ],
+        "desafios": [
+          {
+            "titulo": "API de Trilhas",
+            "descricao": "Crie uma API REST com Express que expõe os endpoints GET /trilhas e GET /trilhas/:id lendo do trilhas.json.",
+            "dica": "Use um middleware de tratamento de erros global para retornar respostas padronizadas."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Performance e Escalabilidade",
+        "topicos": [
+          "Streams para processamento de grandes volumes",
+          "Worker Threads e processamento paralelo",
+          "Caching com Redis",
+          "Monitoramento e profiling de aplicações Node.js"
+        ],
+        "desafios": [
+          {
+            "titulo": "Processador de Logs",
+            "descricao": "Use Streams para processar um arquivo de log grande (>100MB) e gerar um relatório de erros sem carregar tudo na memória.",
+            "dica": "Use Transform streams para filtrar e agregar os dados em tempo real."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "tecnologia": "Git e GitHub",
+    "descricao": "Domine o controle de versão com Git e colaboração no GitHub: branches, pull requests, actions e boas práticas.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Controle de Versão com Git",
+        "topicos": [
+          "Conceitos: repositório, commit, branch, merge",
+          "Comandos essenciais: init, add, commit, push, pull",
+          "Trabalhando com .gitignore",
+          "Conectando ao GitHub: SSH e HTTPS"
+        ],
+        "desafios": [
+          {
+            "titulo": "Primeiro Repositório",
+            "descricao": "Crie um repositório para o Geo-Explorer no GitHub, faça o primeiro commit com a estrutura inicial e configure o .gitignore.",
+            "dica": "Use git log --oneline para verificar o histórico de commits."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Fluxo de Trabalho Colaborativo",
+        "topicos": [
+          "Git Flow e trunk-based development",
+          "Pull Requests e code review",
+          "Resolução de conflitos de merge",
+          "Tags e releases"
+        ],
+        "desafios": [
+          {
+            "titulo": "Feature Branch",
+            "descricao": "Crie uma branch feature/comando-certificado, implemente a feature e abra um Pull Request descritivo.",
+            "dica": "Escreva uma descrição clara no PR explicando o que foi feito e como testar."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "GitHub Actions e CI/CD",
+        "topicos": [
+          "O que é CI/CD e por que usar",
+          "Criando workflows com GitHub Actions",
+          "Rodando testes automaticamente em cada push",
+          "Deploy automático de aplicações"
+        ],
+        "desafios": [
+          {
+            "titulo": "Pipeline de Testes",
+            "descricao": "Configure um workflow no GitHub Actions que executa os testes do Geo-Explorer automaticamente a cada push na branch main.",
+            "dica": "Use o template Node.js do GitHub Actions e configure a versão do Node corretamente."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "tecnologia": "Testes Automatizados com Jest",
+    "descricao": "Aprenda a escrever testes unitários, de integração e mocks com Jest para garantir a qualidade do seu código TypeScript.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Primeiros Testes com Jest",
+        "topicos": [
+          "O que são testes unitários e por que escrever",
+          "Estrutura de um teste: describe, it, expect",
+          "Matchers essenciais: toBe, toEqual, toContain",
+          "Configurando Jest com TypeScript"
+        ],
+        "desafios": [
+          {
+            "titulo": "Testando a Calculadora",
+            "descricao": "Escreva testes unitários para todas as funções da calculadora criada na trilha de TypeScript.",
+            "dica": "Teste casos de borda como divisão por zero e números negativos."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Mocks e Testes de Integração",
+        "topicos": [
+          "O que são mocks e quando usar",
+          "jest.fn(), jest.spyOn() e jest.mock()",
+          "Testando chamadas a APIs externas",
+          "Coverage: medindo cobertura de testes"
+        ],
+        "desafios": [
+          {
+            "titulo": "Mock de Serviço",
+            "descricao": "Escreva testes para o comando trilha mockando o serviço de leitura do trilhas.json.",
+            "dica": "Use jest.mock() para substituir o módulo fs e retornar dados controlados."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "TDD e Testes Avançados",
+        "topicos": [
+          "Test-Driven Development (TDD) na prática",
+          "Testes de snapshot",
+          "Testes end-to-end com ferramentas como Playwright",
+          "Estratégias para testar código assíncrono"
+        ],
+        "desafios": [
+          {
+            "titulo": "TDD para Novo Comando",
+            "descricao": "Usando TDD, implemente um novo comando progress que exibe o progresso do usuário em uma trilha.",
+            "dica": "Escreva os testes antes de qualquer implementação e faça-os passar um a um."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "tecnologia": "APIs e Integrações",
+    "descricao": "Aprenda a consumir e criar APIs RESTful e GraphQL, autenticar requisições e integrar serviços de IA.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Consumindo APIs REST",
+        "topicos": [
+          "O que é uma API REST e HTTP",
+          "Verbos HTTP: GET, POST, PUT, DELETE",
+          "Usando fetch e axios para requisições",
+          "Tratamento de erros e status codes"
+        ],
+        "desafios": [
+          {
+            "titulo": "Consumindo API Pública",
+            "descricao": "Use a API pública do GitHub para buscar os repositórios de um usuário e exibir nome, descrição e número de stars.",
+            "dica": "A URL base é https://api.github.com/users/{username}/repos"
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Autenticação e Segurança em APIs",
+        "topicos": [
+          "API Keys e como gerenciá-las com segurança",
+          "OAuth 2.0 e fluxos de autorização",
+          "JWT: criação, validação e refresh tokens",
+          "Rate limiting e boas práticas"
+        ],
+        "desafios": [
+          {
+            "titulo": "Integração com API de IA",
+            "descricao": "Integre o Geo-Explorer com uma API de IA (como a da IBM ou OpenAI) para gerar desafios dinâmicos com base na trilha escolhida.",
+            "dica": "Armazene a API Key em variável de ambiente e nunca a exponha no código."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "GraphQL e APIs em Tempo Real",
+        "topicos": [
+          "GraphQL vs REST: quando usar cada um",
+          "Criando um schema GraphQL básico",
+          "WebSockets para comunicação em tempo real",
+          "Server-Sent Events (SSE) para streaming de IA"
+        ],
+        "desafios": [
+          {
+            "titulo": "Streaming de Respostas",
+            "descricao": "Implemente o comando desafio usando SSE para exibir a resposta da IA em tempo real, token por token.",
+            "dica": "Use o parâmetro stream:true da API e processe os chunks com um Transform stream."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "tecnologia": "Docker e Contêineres",
+    "descricao": "Containerize aplicações com Docker, gerencie ambientes com Docker Compose e entenda conceitos de infraestrutura moderna.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Introdução ao Docker",
+        "topicos": [
+          "O que são contêineres e por que usar Docker",
+          "Imagens vs Contêineres",
+          "Comandos básicos: run, build, ps, stop, rm",
+          "Docker Hub e imagens oficiais"
+        ],
+        "desafios": [
+          {
+            "titulo": "Containerizando o Geo-Explorer",
+            "descricao": "Crie um Dockerfile para o Geo-Explorer e rode a aplicação dentro de um contêiner Docker.",
+            "dica": "Use uma imagem base node:20-alpine para manter a imagem pequena."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Docker Compose e Multi-serviços",
+        "topicos": [
+          "docker-compose.yml: estrutura e serviços",
+          "Volumes e persistência de dados",
+          "Redes entre contêineres",
+          "Variáveis de ambiente no Docker"
+        ],
+        "desafios": [
+          {
+            "titulo": "Stack Completa",
+            "descricao": "Configure um docker-compose.yml com a aplicação Node.js e um banco Redis para cache.",
+            "dica": "Use depends_on para garantir a ordem de inicialização dos serviços."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Otimização e Produção",
+        "topicos": [
+          "Multi-stage builds para imagens menores",
+          "Health checks e restart policies",
+          "Introdução ao Kubernetes",
+          "Segurança em contêineres"
+        ],
+        "desafios": [
+          {
+            "titulo": "Multi-stage Build",
+            "descricao": "Otimize o Dockerfile do Geo-Explorer com multi-stage build, separando as etapas de build e runtime.",
+            "dica": "A imagem final deve conter apenas os arquivos compilados, sem o código-fonte TypeScript."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "tecnologia": "Banco de Dados com SQL",
+    "descricao": "Aprenda os fundamentos de bancos de dados relacionais, SQL e integração com aplicações Node.js usando ORMs.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Fundamentos de SQL",
+        "topicos": [
+          "Conceitos: tabelas, colunas, linhas, chaves",
+          "SELECT, INSERT, UPDATE, DELETE",
+          "WHERE, ORDER BY, LIMIT",
+          "Introdução ao PostgreSQL"
+        ],
+        "desafios": [
+          {
+            "titulo": "Banco de Trilhas",
+            "descricao": "Modele e crie as tabelas para armazenar trilhas, módulos e desafios em PostgreSQL.",
+            "dica": "Use chaves estrangeiras para relacionar as tabelas corretamente."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Consultas Avançadas e Relacionamentos",
+        "topicos": [
+          "JOINs: INNER, LEFT, RIGHT, FULL",
+          "Aggregations: COUNT, SUM, AVG, GROUP BY",
+          "Subqueries e CTEs",
+          "Índices e performance de consultas"
+        ],
+        "desafios": [
+          {
+            "titulo": "Relatório de Progresso",
+            "descricao": "Escreva uma query SQL que retorna o progresso de cada usuário em cada trilha, ordenado pelo percentual de conclusão.",
+            "dica": "Use CTE para calcular o total de módulos e os módulos concluídos separadamente."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "ORM com Prisma e TypeScript",
+        "topicos": [
+          "O que é um ORM e quando usar",
+          "Configurando o Prisma com TypeScript",
+          "Migrations e schema evolution",
+          "Queries complexas com Prisma Client"
+        ],
+        "desafios": [
+          {
+            "titulo": "Migrando para Prisma",
+            "descricao": "Substitua as leituras do trilhas.json por queries ao banco de dados usando Prisma, mantendo os mesmos contratos de dados.",
+            "dica": "Crie um seed script para popular o banco com os dados do JSON existente."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "tecnologia": "Clean Code e Boas Práticas",
+    "descricao": "Escreva código limpo, legível e manutenível seguindo princípios como SOLID, DRY, KISS e padrões de projeto.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Princípios Básicos de Clean Code",
+        "topicos": [
+          "Nomes significativos para variáveis e funções",
+          "Funções pequenas e com responsabilidade única",
+          "Comentários: quando usar e quando evitar",
+          "Formatação e consistência de código"
+        ],
+        "desafios": [
+          {
+            "titulo": "Refatoração Básica",
+            "descricao": "Receba um trecho de código confuso e refatore-o aplicando nomes significativos e funções menores.",
+            "dica": "Cada função deve fazer apenas uma coisa e ter no máximo 20 linhas."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Princípios SOLID",
+        "topicos": [
+          "S: Single Responsibility Principle",
+          "O: Open/Closed Principle",
+          "L: Liskov Substitution Principle",
+          "I: Interface Segregation / D: Dependency Inversion"
+        ],
+        "desafios": [
+          {
+            "titulo": "Aplicando SOLID",
+            "descricao": "Analise os serviços do Geo-Explorer e identifique violações dos princípios SOLID, propondo refatorações.",
+            "dica": "Comece pelo SRP: cada classe/módulo deve ter apenas um motivo para mudar."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Padrões de Projeto (Design Patterns)",
+        "topicos": [
+          "Padrões criacionais: Factory, Singleton, Builder",
+          "Padrões estruturais: Adapter, Decorator, Facade",
+          "Padrões comportamentais: Strategy, Observer, Command",
+          "Quando usar e quando evitar cada padrão"
+        ],
+        "desafios": [
+          {
+            "titulo": "Padrão Strategy para Comandos",
+            "descricao": "Refatore os comandos do Geo-Explorer usando o padrão Strategy para que novos comandos possam ser adicionados sem modificar o código existente.",
+            "dica": "Crie uma interface ICommand com um método execute() e implemente-a em cada comando."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "tecnologia": "IBM Watson e watsonx",
+    "descricao": "Explore a plataforma de IA da IBM: Watson APIs, watsonx.ai para modelos fundacionais e watsonx Assistant para chatbots.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Introdução ao ecossistema IBM AI",
+        "topicos": [
+          "Visão geral da IBM Cloud e watsonx",
+          "Diferença entre Watson e watsonx",
+          "Criando uma conta na IBM Cloud",
+          "Explorando o watsonx.ai Prompt Lab"
+        ],
+        "desafios": [
+          {
+            "titulo": "Primeiro Prompt no watsonx",
+            "descricao": "Use o watsonx.ai Prompt Lab para gerar uma descrição de trilha de aprendizagem para TypeScript.",
+            "dica": "Experimente diferentes modelos fundacionais e compare os resultados."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Integrando watsonx.ai via API",
+        "topicos": [
+          "Autenticação com IBM Cloud IAM",
+          "Chamando o endpoint de geração de texto",
+          "Parâmetros de controle: max_tokens, temperature, stop",
+          "Modelos disponíveis: Llama, Granite, Mistral"
+        ],
+        "desafios": [
+          {
+            "titulo": "Gerador de Desafios com watsonx",
+            "descricao": "Substitua os desafios estáticos do JSON por desafios gerados dinamicamente via API do watsonx.ai.",
+            "dica": "Use o modelo ibm/granite-13b-instruct-v2 com um prompt bem estruturado."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "watsonx Assistant e Pipelines",
+        "topicos": [
+          "Criando um assistente com watsonx Assistant",
+          "Intents, entities e dialog flows",
+          "Integrando o assistente com o Geo-Explorer",
+          "Monitoramento e melhoria contínua do assistente"
+        ],
+        "desafios": [
+          {
+            "titulo": "Assistente do Geo-Explorer",
+            "descricao": "Crie um watsonx Assistant que responde perguntas sobre as trilhas disponíveis e recomenda a trilha ideal para o usuário.",
+            "dica": "Defina intents claras como #consultar-trilha e #recomendar-trilha com exemplos de utterances."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "tecnologia": "Linha de Comando (CLI)",
+    "descricao": "Crie ferramentas de linha de comando poderosas com Node.js: parsing de argumentos, interatividade e distribuição via NPM.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Fundamentos de CLI com Node.js",
+        "topicos": [
+          "process.argv e leitura de argumentos",
+          "Colorindo o terminal com chalk",
+          "Exibindo tabelas e listas formatadas",
+          "Shebang e executáveis NPM"
+        ],
+        "desafios": [
+          {
+            "titulo": "CLI Hello World",
+            "descricao": "Crie um script CLI que aceita o argumento --nome e exibe uma saudação personalizada e colorida no terminal.",
+            "dica": "Use chalk para colorir a saudação e process.argv para ler o argumento."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Frameworks CLI: Commander e Inquirer",
+        "topicos": [
+          "Estruturando comandos com Commander.js",
+          "Prompts interativos com Inquirer.js",
+          "Subcomandos e opções globais",
+          "Validação de argumentos e mensagens de ajuda"
+        ],
+        "desafios": [
+          {
+            "titulo": "CLI Interativa do Geo-Explorer",
+            "descricao": "Refatore o Geo-Explorer para usar Commander.js nos comandos e Inquirer.js para seleção interativa de trilha e nível.",
+            "dica": "Use inquirer.prompt com tipo list para exibir as opções disponíveis."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Distribuição e Publicação de CLIs",
+        "topicos": [
+          "Configurando bin no package.json",
+          "Publicando no NPM Registry",
+          "Atualizações automáticas com update-notifier",
+          "Criando instaladores e binários com pkg"
+        ],
+        "desafios": [
+          {
+            "titulo": "Publicando o Geo-Explorer",
+            "descricao": "Configure o Geo-Explorer para ser instalável globalmente via NPM e publique uma versão beta no NPM Registry.",
+            "dica": "Use npm version patch e npm publish --tag beta para publicar sem afetar a versão estável."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "tecnologia": "Segurança em Aplicações",
+    "descricao": "Aprenda os fundamentos de segurança para desenvolvedores: OWASP Top 10, criptografia, gerenciamento de secrets e práticas seguras.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Fundamentos de Segurança para Devs",
+        "topicos": [
+          "Os 10 principais riscos do OWASP",
+          "Injeção de código e como prevenir",
+          "Gerenciamento seguro de senhas e secrets",
+          "HTTPS e criptografia em trânsito"
+        ],
+        "desafios": [
+          {
+            "titulo": "Auditoria de Segurança",
+            "descricao": "Execute npm audit no Geo-Explorer, analise as vulnerabilidades encontradas e corrija as críticas.",
+            "dica": "Use npm audit fix para correções automáticas e revise manualmente as que exigem breaking changes."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "Autenticação e Autorização Seguras",
+        "topicos": [
+          "Hashing de senhas com bcrypt",
+          "JWT: boas práticas e armadilhas comuns",
+          "Controle de acesso baseado em roles (RBAC)",
+          "Proteção contra CSRF e XSS"
+        ],
+        "desafios": [
+          {
+            "titulo": "Protegendo o Certificado",
+            "descricao": "Adicione um sistema de verificação de autenticidade ao certificado usando assinatura digital com o módulo crypto do Node.js.",
+            "dica": "Use crypto.createHash('sha256') para gerar um hash único baseado nos dados do certificado."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "DevSecOps e Segurança em Pipeline",
+        "topicos": [
+          "SAST: análise estática de segurança",
+          "Scanning de dependências no CI/CD",
+          "Secrets management com ferramentas como HashiCorp Vault",
+          "Política de segurança e resposta a incidentes"
+        ],
+        "desafios": [
+          {
+            "titulo": "Pipeline Seguro",
+            "descricao": "Configure o GitHub Actions para executar análise de segurança com CodeQL e scanning de dependências a cada Pull Request.",
+            "dica": "Use a action github/codeql-action e configure as permissões mínimas necessárias."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "tecnologia": "Documentação Técnica",
+    "descricao": "Aprenda a documentar projetos de forma clara e eficiente: READMEs, JSDoc, OpenAPI, diagramas e wikis técnicas.",
+    "niveis": ["iniciante", "intermediario", "avancado"],
+    "modulos": [
+      {
+        "nivel": "iniciante",
+        "titulo": "Escrevendo um Bom README",
+        "topicos": [
+          "Estrutura essencial de um README profissional",
+          "Markdown: formatação, tabelas, badges e imagens",
+          "Como descrever instalação e uso de forma clara",
+          "Licenças de software open source"
+        ],
+        "desafios": [
+          {
+            "titulo": "README do Geo-Explorer",
+            "descricao": "Escreva o README completo do Geo-Explorer seguindo as boas práticas, incluindo badges de status, exemplos de uso e seção de contribuição.",
+            "dica": "Use shields.io para gerar badges de versão, licença e status de build."
+          }
+        ]
+      },
+      {
+        "nivel": "intermediario",
+        "titulo": "JSDoc e Documentação de APIs",
+        "topicos": [
+          "Anotações JSDoc para funções, classes e tipos",
+          "Gerando documentação HTML com TypeDoc",
+          "OpenAPI/Swagger para documentar APIs REST",
+          "Mantendo a documentação sincronizada com o código"
+        ],
+        "desafios": [
+          {
+            "titulo": "Documentando os Serviços",
+            "descricao": "Adicione JSDoc completo a todos os serviços do Geo-Explorer e gere a documentação HTML com TypeDoc.",
+            "dica": "Documente parâmetros, retornos, exemplos e possíveis erros lançados."
+          }
+        ]
+      },
+      {
+        "nivel": "avancado",
+        "titulo": "Diagramas e Documentação Arquitetural",
+        "topicos": [
+          "Diagramas com Mermaid no Markdown",
+          "C4 Model para documentação de arquitetura",
+          "Architecture Decision Records (ADR)",
+          "Criando wikis técnicas no GitHub"
+        ],
+        "desafios": [
+          {
+            "titulo": "Diagrama de Arquitetura",
+            "descricao": "Crie um diagrama Mermaid que ilustra o fluxo completo do Geo-Explorer, desde o comando CLI até a geração do certificado.",
+            "dica": "Use um diagrama de sequência (sequenceDiagram) para mostrar a interação entre os componentes."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "geo-explorer": {
+      "command": "node",
+      "args": ["D:\\Projetos\\Dio\\ibm-bob\\geo-explorer\\mcp\\build\\index.js"]
+    }
+  }
+}

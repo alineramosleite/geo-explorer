@@ -1,0 +1,83 @@
+﻿# ==========================================
+# .bobignore — Geo-Explorer
+# Arquivos que o IBM Bob NAO deve acessar
+# ou modificar neste projeto.
+# Mesma sintaxe do .gitignore.
+# ==========================================
+
+# ------------------------------------------
+# SEGURANCA: credenciais e secrets
+# O Bob nunca deve ler ou alterar esses arquivos
+# ------------------------------------------
+.env
+.env.*
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+*password*
+*credential*
+*apikey*
+*secret*
+config/credentials.json
+
+# ------------------------------------------
+# DEPENDENCIAS: pacotes instalados
+# Muito grande e irrelevante para o Bob
+# ------------------------------------------
+node_modules/
+
+# ------------------------------------------
+# BUILD: artefatos compilados
+# Gerados automaticamente, Bob deve trabalhar
+# apenas com o codigo-fonte em src/
+# ------------------------------------------
+dist/
+build/
+out/
+*.js.map
+
+# ------------------------------------------
+# GIT: historico de controle de versao
+# Nao tem utilidade para o Bob
+# ------------------------------------------
+.git/
+
+# ------------------------------------------
+# LOGS: arquivos de log gerados em runtime
+# ------------------------------------------
+*.log
+logs/
+npm-debug.log*
+
+# ------------------------------------------
+# COBERTURA DE TESTES: relatorios gerados
+# ------------------------------------------
+coverage/
+.nyc_output/
+
+# ------------------------------------------
+# ARQUIVOS GRANDES E BINARIOS
+# Bob trabalha com texto; binarios nao sao uteis
+# ------------------------------------------
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.mp4
+*.mp3
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.pdf
+
+# ------------------------------------------
+# SO / EDITOR: arquivos do sistema operacional
+# e configuracoes de editores
+# ------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
